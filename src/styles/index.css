@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@theme {
+  /* ======================
+     PALETA DE CORES SEMÂNTICA
+     (DesignPal • Tech Elegance)
+  ====================== */
+
+  /* -------- Cores Base -------- */
+  --color-white: #ffffff;
+  --color-black: #0f172a; /* Azul petróleo profundo */
+  --color-body: #1e293b; /* Texto primário escuro */
+  --color-muted: #64748b; /* Texto secundário */
+
+  /* -------- Cores de Branding -------- */
+  --color-primary: #2563eb; /* Azul royal (ação principal) */
+  --color-primary-dark: #1e40af; /* Azul profundo (hover, dark) */
+  --color-primary-light: #bfdbfe; /* Azul claro (destaque leve) */
+
+  --color-secondary: #7c3aed; /* Lilás tech (secundário leve) */
+  --color-secondary-dark: #5b21b6; /* Lilás escuro (hover) */
+
+  /* -------- Feedback/Status -------- */
+  --color-success: #22c55e; /* Verde vibrante */
+  --color-error: #ef4444; /* Vermelho (erro crítico) */
+  --color-warning: #facc15; /* Amarelo (alerta leve) */
+  --color-info: #0ea5e9; /* Azul-ciano informativo */
+
+  /* -------- Escala de Cinzas -------- */
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-500: #64748b;
+  --color-gray-700: #334155;
+  --color-gray-900: #0f172a;
+
+  /* -------- Camadas de Interface -------- */
+  --color-background: #f9fafb; /* Cor de fundo geral (modo claro) */
+  --color-surface: #ffffff; /* Cards, modais, seções */
+  --color-hover: #f1f5f9; /* Hover de cards/botões */
+  --color-border: #e5e7eb; /* Bordas sutis */
+  --color-overlay: rgba(15, 23, 42, 0.5); /* Overlay preto-azulado */
+
+  /* -------- Dark Mode -------- */
+  --color-dark-background: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-dark-text: #f1f5f9;
+  --color-dark-muted: #94a3b8;
+
+  /* -------- Cores Especiais -------- */
+  --color-accent: #14b8a6; /* Verde-água elegante (destaque) */
+  --color-highlight: #e879f9; /* Rosa lilás para links especiais */
+}

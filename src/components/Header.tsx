@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 export function Header() {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
-      ? "text-blue-500 font-semibold"
-      : "text-gray-700 hover:text-blue-500";
+      ? "text-primary font-semibold"
+      : "text-muted hover:text-primary-dark transition-colors";
 
   return (
-    <header className="bg-white shadow-md stiky top-0 z-50">
+    <header className="bg-background text-body dark:bg-dark-surface dark:text-dark-text shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between p-4">
         <h1 className="text-xl font-bold">Meu Portfólio</h1>
         <nav className="space-x-4">
