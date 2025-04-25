@@ -1,0 +1,12 @@
+# Padrão
+node_modules/
+dist/
+.env
+
+# IDE
+.vscode/
+.DS_Store
+
+# Plataforma
+.vercel/
+netlify/
