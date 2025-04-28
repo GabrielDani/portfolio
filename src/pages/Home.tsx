@@ -1,9 +1,9 @@
-import { SocialLinks } from "@/components/common/SocialLinks";
-import { Avatar } from "@/components/ui/Avatar";
-import { ButtonLink } from "@/components/ui/ButtonLink";
-import { Heading } from "@/components/ui/Heading";
-import { Paragraph } from "@/components/ui/Paragraph";
-import { fadeInUp, fadeIn, scaleIn } from "@/animations/variants";
+import { SocialLinks } from "@/components/molecules/SocialLinks";
+import { Avatar } from "@/components/atoms/Avatar";
+import { ButtonLink } from "@/components/atoms/ButtonLink";
+import { Heading } from "@/components/atoms/Heading";
+import { Paragraph } from "@/components/atoms/Paragraph";
+import { fadeInUp, fadeIn, scaleIn } from "@/components/animations/variants";
 import { motion } from "framer-motion";
 
 export default function Home() {
