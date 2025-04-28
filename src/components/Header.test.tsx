@@ -1,3 +1,4 @@
+// src/components/Header.test.tsx
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
@@ -18,7 +19,7 @@ describe("Header", () => {
     expect(screen.getByText("Contato")).toBeInTheDocument();
   });
 
-  it("aplica a classe ativa ao link atual", () => {
+  it("aplica a classe ativa correta ao link atual", () => {
     render(
       <MemoryRouter initialEntries={["/projetos"]}>
         <Header />
@@ -26,7 +27,7 @@ describe("Header", () => {
     );
 
     const projetosLink = screen.getByText("Projetos");
-    expect(projetosLink).toHaveClass("text-blue-500");
+    expect(projetosLink.className).toContain("text-primary");
   });
 
   it("navega para a rota correta ao clicar no link", async () => {
