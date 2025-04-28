@@ -1,4 +1,5 @@
-import Layout from "@/layout/Layout";
+import Layout from "@/components/organisms/Layout";
+import Loading from "@/pages/Loading";
 import { JSX, lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const Home = lazy(() => import("@/pages/Home"));
 const withSuspense = (
   Component: React.LazyExoticComponent<() => JSX.Element>
 ) => (
-  <Suspense fallback={<div className="p-4">Carregando...</div>}>
+  <Suspense fallback={<Loading />}>
     <Component />
   </Suspense>
 );
