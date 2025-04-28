@@ -1,5 +1,6 @@
 import Layout from "@/components/organisms/Layout";
 import Loading from "@/pages/Loading";
+import NotFound from "@/pages/NotFound";
 import { JSX, lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
       //   { path: "sobre", element: withSuspense(About) },
       //   { path: "projetos", element: withSuspense(Projects) },
       //   { path: "contato", element: withSuspense(Contact) },
-      { path: "*", element: <div>Página não encontrada</div> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
