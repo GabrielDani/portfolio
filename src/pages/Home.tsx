@@ -5,10 +5,11 @@ import { Heading } from "@/components/atoms/Heading";
 import { Paragraph } from "@/components/atoms/Paragraph";
 import { fadeInUp, fadeIn, scaleIn } from "@/components/animations/variants";
 import { motion } from "framer-motion";
+import { PageContainer } from "@/components/atoms/PageContainer";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 space-y-6">
+    <PageContainer>
       <motion.div {...scaleIn}>
         <Avatar icon="👨‍💻" />
       </motion.div>
@@ -31,6 +32,6 @@ export default function Home() {
       <motion.div {...fadeIn} className="mt-6">
         <SocialLinks />
       </motion.div>
-    </section>
+    </PageContainer>
   );
 }
