@@ -3,6 +3,7 @@ import { Heading } from "@/components/atoms/Heading";
 import { Paragraph } from "@/components/atoms/Paragraph";
 import { fadeInUp } from "@/components/animations/variants";
 import { motion } from "framer-motion";
+import { email, github, linkedin } from "@/data/contacts";
 
 export default function Contact() {
   return (
@@ -14,7 +15,7 @@ export default function Contact() {
 
         <div className="mt-6 space-x-4">
           <a
-            href="https://github.com/GabrielDani"
+            href={github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline hover:text-primary-dark"
@@ -22,7 +23,7 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/gabriel-dani-de-azevedo-a69740288"
+            href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline hover:text-primary-dark"
@@ -30,7 +31,7 @@ export default function Contact() {
             LinkedIn
           </a>
           <a
-            href="gabriel.dani07@gmail.com"
+            href={email}
             className="text-primary underline hover:text-primary-dark"
           >
             E-mail
