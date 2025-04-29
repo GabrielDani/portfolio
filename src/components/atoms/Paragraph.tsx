@@ -1,3 +1,9 @@
-export function Paragraph({ text }: { text: string }) {
-  return <p className="max-w-xl text-muted">{text}</p>;
+export function Paragraph({
+  text,
+  className = "",
+}: {
+  text: string;
+  className?: string;
+}) {
+  return <p className={`max-w-xl text-muted ${className}`}>{text}</p>;
 }
