@@ -7,7 +7,7 @@ import { createBrowserRouter } from "react-router-dom";
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
 const Projects = lazy(() => import("@/pages/Projects"));
-// const Contact = lazy(() => import('@/pages/Contact'));
+const Contact = lazy(() => import("@/pages/Contact"));
 
 const withSuspense = (
   Component: React.LazyExoticComponent<() => JSX.Element>
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       { index: true, element: withSuspense(Home) },
       { path: "sobre", element: withSuspense(About) },
       { path: "projetos", element: withSuspense(Projects) },
-      //   { path: "contato", element: withSuspense(Contact) },
+      { path: "contato", element: withSuspense(Contact) },
       { path: "*", element: <NotFound /> },
     ],
   },
