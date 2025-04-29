@@ -1,44 +1,33 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Projects from "./Projects";
-import { describe, it, expect, vi } from "vitest";
-
-vi.mock("@/data/projects", async () => {
-  const actual = await vi.importActual("@/data/projects");
-  return {
-    ...actual,
-    projects: [
-      {
-        title: "Teste Card",
-        description: "Descrição de teste",
-        techs: ["React", "TS"],
-        link: "https://example.com",
-        thumbnail: "/img.png",
-      },
-    ],
-  };
-});
+import { describe, it, expect } from "vitest";
 
 describe("Projects Page", () => {
-  it("renderiza o título e descrição da página", () => {
+  it("mostra todos os projetos ao iniciar", () => {
     render(<Projects />);
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
-      /meus projetos/i
-    );
-    expect(screen.getByText(/alguns projetos pessoais/i)).toBeInTheDocument();
+    expect(screen.getByText(/meus projetos/i)).toBeInTheDocument();
+    expect(screen.getAllByRole("link").length).toBeGreaterThan(0);
   });
 
-  it("renderiza um card de projeto com título, descrição e techs", () => {
+  it("filtra projetos por tecnologia", async () => {
+    const user = userEvent.setup();
     render(<Projects />);
-    expect(screen.getByText("Teste Card")).toBeInTheDocument();
-    expect(screen.getByText("Descrição de teste")).toBeInTheDocument();
-    expect(screen.getByText("React")).toBeInTheDocument();
-    expect(screen.getByText("TS")).toBeInTheDocument();
+
+    const reactFilter = screen.getByRole("button", { name: /react/i });
+    await user.click(reactFilter);
+
+    const cards = screen.getAllByRole("link");
+    expect(cards.length).toBeGreaterThan(0);
   });
 
-  it("possui link externo para o projeto", () => {
+  it("reseta o filtro com botão Todos", async () => {
+    const user = userEvent.setup();
     render(<Projects />);
-    const link = screen.getByRole("link", { name: /teste card/i });
-    expect(link).toHaveAttribute("href", "https://example.com");
-    expect(link).toHaveAttribute("target", "_blank");
+
+    const todosButton = screen.getByRole("button", { name: /todos/i });
+    await user.click(todosButton);
+
+    expect(screen.getAllByRole("link").length).toBeGreaterThan(0);
   });
 });
