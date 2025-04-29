@@ -1,4 +1,5 @@
 import Layout from "@/components/organisms/Layout";
+import ErrorFallback from "@/pages/ErrorFallback";
 import Loading from "@/pages/Loading";
 import NotFound from "@/pages/NotFound";
 import { JSX, lazy, Suspense } from "react";
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <ErrorFallback />,
     children: [
       { index: true, element: withSuspense(Home) },
       { path: "sobre", element: withSuspense(About) },
