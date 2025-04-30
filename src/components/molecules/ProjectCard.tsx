@@ -1,12 +1,5 @@
+import { Project } from "@/types/project";
 import { Paragraph } from "../atoms/Paragraph";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  techs: string[];
-  link: string;
-  thumbnail?: string;
-}
 
 export function ProjectCard({
   title,
@@ -14,7 +7,7 @@ export function ProjectCard({
   techs,
   link,
   thumbnail,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <a
       href={link}
