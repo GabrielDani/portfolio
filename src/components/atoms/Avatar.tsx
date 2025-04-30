@@ -1,11 +1,24 @@
-export function Avatar({ icon }: { icon: string }) {
+interface AvatarProps {
+  icon?: string;
+  imageSrc?: string;
+  alt?: string;
+}
+
+export function Avatar({ icon, imageSrc, alt = "Avatar" }: AvatarProps) {
   return (
-    <div
-      role="img"
-      aria-label="Avatar programador"
-      className="w-32 h-32 bg-primary-light rounded-full flex items-center justify-center text-white text-5xl font-bold"
-    >
-      <span>{icon}</span>
+    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-md">
+      {imageSrc ? (
+        <img
+          src={imageSrc}
+          alt={alt}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center text-4xl">
+          {icon}
+        </div>
+      )}
     </div>
   );
 }

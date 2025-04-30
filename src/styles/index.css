@@ -17,8 +17,9 @@
   --color-primary-dark: #1e40af; /* Azul profundo para hover */
   --color-primary-light: #60a5fa; /* Azul leve para destaques sutis */
 
-  --color-secondary: #7c3aed; /* Lilás tech sofisticado */
-  --color-secondary-dark: #5b21b6; /* Lilás mais profundo para hover */
+  --color-secondary: #047857; /* Verde profundo */
+  --color-secondary-dark: #065f46;
+  --color-on-secondary: #d1fae5; /* Verde menta */
 
   /* -------- Feedback/Status -------- */
   --color-success: #22c55e; /* Verde sucesso */

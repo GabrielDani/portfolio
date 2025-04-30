@@ -16,3 +16,10 @@ export const scaleIn = {
   animate: { opacity: 1, scale: 1 },
   transition: { duration: 0.6, ease: "easeOut" },
 };
+
+export const staggeredContainer = {
+  initial: "hidden",
+  whileInView: "show",
+  viewport: { once: true },
+  transition: { staggerChildren: 0.2 },
+};
