@@ -5,7 +5,7 @@ import NotFound from "@/pages/NotFound";
 import { JSX, lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const Home = lazy(() => import("@/pages/Home"));
+const Home = lazy(() => import("@/pages/Home/Home"));
 const About = lazy(() => import("@/pages/About/About"));
 const Projects = lazy(() => import("@/pages/Projects"));
 const Contact = lazy(() => import("@/pages/Contact"));

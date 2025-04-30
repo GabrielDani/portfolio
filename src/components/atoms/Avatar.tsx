@@ -6,7 +6,7 @@ interface AvatarProps {
 
 export function Avatar({ icon, imageSrc, alt = "Avatar" }: AvatarProps) {
   return (
-    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-md">
+    <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-md hover:scale-110">
       {imageSrc ? (
         <img
           src={imageSrc}

@@ -2,9 +2,10 @@ interface HeadingProps {
   level: 1 | 2;
   text: string;
   variant?: "subheading";
+  className?: string;
 }
 
-export function Heading({ level, text, variant }: HeadingProps) {
+export function Heading({ level, text, variant, className }: HeadingProps) {
   const Tag = level === 1 ? "h1" : "h2";
   const classes =
     level === 1
@@ -13,5 +14,5 @@ export function Heading({ level, text, variant }: HeadingProps) {
       ? "text-lg text-muted"
       : "text-2xl text-primary";
 
-  return <Tag className={classes}>{text}</Tag>;
+  return <Tag className={`${classes} ${className}`}>{text}</Tag>;
 }
