@@ -1,5 +1,5 @@
 // src/data/projects.ts
-import { Project } from "@/types/project";
+import { Project, ProjectType } from "@/types/project";
 
 export const projects: Project[] = [
   {
@@ -18,6 +18,7 @@ export const projects: Project[] = [
       "Vitest",
       "Zustand",
     ],
+    type: ProjectType.FRONTEND,
   },
   {
     title: "Palpites Brasileirão - Frontend",
@@ -34,6 +35,7 @@ export const projects: Project[] = [
       "Vite",
       "Radix UI",
     ],
+    type: ProjectType.FRONTEND,
   },
   {
     title: "Palpites Brasileirão - Backend",
@@ -51,6 +53,7 @@ export const projects: Project[] = [
       "CORS",
       "Bcrypt",
     ],
+    type: ProjectType.BACKEND,
   },
   {
     title: "JavaCorrige - Sistema de Correção Automática de POO",
@@ -68,6 +71,7 @@ export const projects: Project[] = [
       "File I/O",
       "JPackage",
     ],
+    type: ProjectType.SYSTEM,
   },
   {
     title: "Reconhecimento Dígitos Manuscritos - IA",
@@ -81,6 +85,7 @@ export const projects: Project[] = [
       "Pandas",
       "Matplotlib",
     ],
+    type: ProjectType.IA,
   },
   {
     title: "Previsão Preços de Casas - IA",
@@ -88,6 +93,7 @@ export const projects: Project[] = [
       "Modelo supervisionado para prever preços de casas com base em atributos do dataset.",
     link: "https://github.com/GabrielDani/Previsao_Precos_Casas",
     techs: ["Python", "Jupyter Notebook", "Pandas", "Scikit-learn", "Seaborn"],
+    type: ProjectType.IA,
   },
   {
     title: "Classificação de Flores (Iris Dataset)",
@@ -95,6 +101,7 @@ export const projects: Project[] = [
       "Modelo de classificação baseado em algoritmos como KNN e Regressão Logística.",
     link: "https://github.com/GabrielDani/Classificacao_Flores_Iris",
     techs: ["Python", "Jupyter Notebook", "Scikit-learn", "Seaborn"],
+    type: ProjectType.IA,
   },
   {
     title: "Calculadora de Investimentos",
@@ -102,6 +109,7 @@ export const projects: Project[] = [
       "Ferramenta para calcular crescimento de investimentos com aportes mensais e juros compostos.",
     link: "https://github.com/GabrielDani/Calculadora_Investimentos",
     techs: ["JavaScript", "HTML", "CSS"],
+    type: ProjectType.FRONTEND,
   },
   {
     title: "Rastreamento com Google Maps",
@@ -109,5 +117,6 @@ export const projects: Project[] = [
       "Aplicativo em Java para rastreamento de posições geográficas integrando API do Google Maps.",
     link: "https://github.com/GabrielDani/Rastreamento_GoogleMaps",
     techs: ["Java", "JavaFX", "Google Maps API"],
+    type: ProjectType.SYSTEM,
   },
 ];

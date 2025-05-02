@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function ProjectsHeader() {
   return (
     <motion.div {...fadeInUp} className="text-center max-w-2xl mx-auto">
-      <Heading level={1} text="Meus Projetos" />
+      <Heading level={1} text="Meus Projetos" className="mb-4" />
       <Paragraph text="Alguns projetos reais, desafios técnicos e sistemas completos que desenvolvi com foco em qualidade de código, arquitetura limpa e performance." />
     </motion.div>
   );

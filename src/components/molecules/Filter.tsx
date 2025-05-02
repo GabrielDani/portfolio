@@ -1,25 +1,25 @@
 import { Button } from "@/components/atoms/Button";
 
 interface FilterProps {
-  techs: string[];
+  types: string[];
   current: string;
   onChange: (value: string) => void;
 }
 
-export function Filter({ techs, current, onChange }: FilterProps) {
+export function Filter({ types, current, onChange }: FilterProps) {
   return (
     <div className="flex flex-wrap justify-center gap-2 mt-8">
       <Button onClick={() => onChange("all")} isActive={current === "all"}>
         Todos
       </Button>
 
-      {techs.map((tech) => (
+      {types.map((type) => (
         <Button
-          key={tech}
-          onClick={() => onChange(tech)}
-          isActive={current === tech}
+          key={type}
+          onClick={() => onChange(type)}
+          isActive={current === type}
         >
-          {tech}
+          {type}
         </Button>
       ))}
     </div>

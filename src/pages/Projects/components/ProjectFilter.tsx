@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/components/animations/variants";
 
 interface ProjectsFilterProps {
-  techs: string[];
+  types: string[];
   current: string;
   onChange: (value: string) => void;
 }
 
 export function ProjectsFilter({
-  techs,
+  types,
   current,
   onChange,
 }: ProjectsFilterProps) {
   return (
-    <motion.div {...fadeIn} className="mt-6">
-      <Filter techs={techs} current={current} onChange={onChange} />
+    <motion.div {...fadeIn}>
+      <Filter types={types} current={current} onChange={onChange} />
     </motion.div>
   );
 }
