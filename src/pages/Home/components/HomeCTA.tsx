@@ -22,7 +22,7 @@ export function HomeCTA() {
       />
 
       <ButtonLink
-        href="/Currículo_GabrielDaniAz"
+        href="/Currículo_GabrielDaniAz.pdf"
         variant="outline"
         text="Baixar Currículo"
         download
