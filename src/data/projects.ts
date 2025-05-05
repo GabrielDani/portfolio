@@ -1,30 +1,13 @@
-// src/data/projects.ts
 import { Project, ProjectType } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    title: "Portfólio",
-    description:
-      "Portfólio pessoal com foco em acessibilidade, design moderno e boas práticas de arquitetura frontend.",
-    link: "https://github.com/GabrielDani/portfolio",
-    techs: [
-      "TypeScript",
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "ShadCN",
-      "Framer Motion",
-      "React Router",
-      "Vitest",
-      "Zustand",
-    ],
-    type: ProjectType.FRONTEND,
-  },
-  {
     title: "Palpites Brasileirão - Frontend",
+    thumbnail:
+      "/images/projects/futebol-palpites/thumb-futebol-palpites-frontend.jpg",
     description:
       "Aplicação SPA para palpite de jogos do Brasileirão, com sistema de autenticação, pontuação e rankings.",
-    link: "https://github.com/GabrielDani/futebol-palpites-frontend",
+    link: "/projetos/futebol-palpites",
     techs: [
       "TypeScript",
       "React",
@@ -33,15 +16,16 @@ export const projects: Project[] = [
       "Zustand",
       "React Router",
       "Vite",
-      "Radix UI",
     ],
     type: ProjectType.FRONTEND,
   },
   {
     title: "Palpites Brasileirão - Backend",
+    thumbnail:
+      "/images/projects/futebol-palpites/thumb-futebol-palpites-backend.jpg",
     description:
       "API RESTful para autenticação, jogos, palpites e rankings em tempo real do sistema de futebol.",
-    link: "https://github.com/GabrielDani/futebol-palpites-backend",
+    link: "/projetos/futebol-palpites",
     techs: [
       "Node.js",
       "Express",
@@ -57,10 +41,11 @@ export const projects: Project[] = [
   },
   {
     title: "JavaCorrige - Sistema de Correção Automática de POO",
+    thumbnail: "/images/projects/javacorrige/thumb-javacorrige.jpg",
     description:
       "Ferramenta para correção automática de exercícios de Programação Orientada a Objetos em Java. " +
       "Analisa código-fonte via Reflection API, compara com gabaritos anotados e gera relatórios em PDF com notas e feedback detalhado.",
-    link: "https://github.com/GabrielDani/JavaCorrige",
+    link: "/projetos/javacorrige",
     techs: [
       "Java",
       "Java Reflection API",
@@ -72,6 +57,25 @@ export const projects: Project[] = [
       "JPackage",
     ],
     type: ProjectType.SYSTEM,
+  },
+  {
+    title: "Portfólio",
+    thumbnail: "/images/projects/portfolio/thumb-portfolio.jpg",
+    description:
+      "Portfólio pessoal com foco em acessibilidade, design moderno e boas práticas de arquitetura frontend.",
+    link: "https://github.com/GabrielDani/portfolio",
+    techs: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "TailwindCSS",
+      "ShadCN",
+      "Framer Motion",
+      "React Router",
+      "Vitest",
+      "Zustand",
+    ],
+    type: ProjectType.FRONTEND,
   },
   {
     title: "Reconhecimento Dígitos Manuscritos - IA",

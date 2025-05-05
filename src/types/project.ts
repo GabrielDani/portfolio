@@ -12,5 +12,5 @@ export enum ProjectType {
   BACKEND = "Backend",
   IA = "Inteligência Artificial",
   SYSTEM = "Sistema",
-  GAME_DEV = "Game Development",
+  // GAME_DEV = "Game Development",
 }

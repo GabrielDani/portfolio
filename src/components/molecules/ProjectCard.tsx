@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Project } from "@/types/project";
 import { Paragraph } from "../atoms/Paragraph";
 
@@ -8,13 +9,28 @@ export function ProjectCard({
   link,
   thumbnail,
 }: Project) {
+  const isInternal = link.startsWith("/");
+  const wrapperClass =
+    "block bg-surface dark:bg-dark-surface p-6 rounded-lg shadow hover:shadow-lg transition-transform hover:-translate-y-1";
+
+  const Wrapper = ({ children }: { children: React.ReactNode }) =>
+    isInternal ? (
+      <Link to={link} className={wrapperClass}>
+        {children}
+      </Link>
+    ) : (
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={wrapperClass}
+      >
+        {children}
+      </a>
+    );
+
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block bg-surface dark:bg-dark-surface p-6 rounded-lg shadow hover:shadow-lg transition-transform hover:-translate-y-1"
-    >
+    <Wrapper>
       {thumbnail && (
         <img
           src={thumbnail}
@@ -34,6 +50,6 @@ export function ProjectCard({
           </li>
         ))}
       </ul>
-    </a>
+    </Wrapper>
   );
 }
