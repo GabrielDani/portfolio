@@ -4,7 +4,7 @@ Bem-vindo ao meu portfólio! Este projeto representa meu trabalho como desenvolv
 
 ## 📸 Visite Online
 
-<!-- 👉 [gabrieldani.vercel.app](https://gabrieldani.vercel.app) -->
+👉 [Site do Portfólio](https://gabrieldani-portfolio.vercel.app)
 
 ---
 
