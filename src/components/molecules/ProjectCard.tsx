@@ -42,10 +42,7 @@ export function ProjectCard({
       <Paragraph text={description} className="text-sm mb-4" />
       <ul className="flex flex-wrap gap-2 text-sm text-primary-dark">
         {techs.map((tech) => (
-          <li
-            key={tech}
-            className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded"
-          >
+          <li key={tech} className="bg-gray-100 px-2 py-1 rounded">
             {tech}
           </li>
         ))}
