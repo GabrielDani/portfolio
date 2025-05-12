@@ -8,7 +8,7 @@ export function HomeHeader() {
   return (
     <>
       <motion.div {...scaleIn}>
-        <Avatar imageSrc="/profilePhoto.jpg" alt="Gabriel Dani" />
+        <Avatar imageSrc="/profilePhoto.jpg" alt="Gabriel Dani" size="lg" />
       </motion.div>
 
       <motion.div {...fadeInUp} className="space-y-2 text-center">
